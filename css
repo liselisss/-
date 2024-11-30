@@ -1,0 +1,84 @@
+html {
+ box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+
+body {
+ min-height: 100vh;
+ background-image: url(../images/bg.jpg);
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+ font-family: "Montserrat", sans-serif; /* Используем шрифт Montserrat */
+}
+.container {
+ max-width: 1190px;
+ padding: 0 5px; /* Увеличиваем боковые отступы */
+ margin: 0 auto; /* Центрируем контейнер по горизонтали */
+}
+
+
+.header {
+ padding-top: 30px; /* Увеличиваем верхний отступ шапки, чтобы логотип и меню не прилипали к экрану */
+ background-color: black;
+}
+
+
+.header__inner {
+ display: flex; /* Выстраиваем элементы внутри контейнера в строку */
+ justify-content: space-between; /* Распределяем элементы по ширине контейнера */
+ align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.footer {
+ padding-top: 30px; /* Увеличиваем верхний отступ шапки, чтобы логотип и меню не прилипали к экрану */
+ background-color: black;
+}
+
+
+.footer__inner {
+ display: flex; /* Выстраиваем элементы внутри контейнера в строку */
+ justify-content: center; /* Распределяем элементы по ширине контейнера */
+ align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.logo {
+ text-transform: uppercase; /* Преобразуем текст в верхний регистр */
+ font-size: 28px; /* Устанавливаем размер шрифта */
+ font-weight: 900; /* Устанавливаем жирное начертание шрифта */
+ color: #D94040; /* Устанавливаем цвет логотипа */
+}
+
+
+.menu__list {
+ display: flex; /* Отображаем элементы списка в строку */
+ list-style: none; /* Убираем стандартные маркеры (чёрные точки) */
+}
+
+.menu__list-item {
+ margin-right: 20px; /* Добавляем отступ между пунктами меню */
+}
+
+.menu__list-link {
+ padding: 10px 20px; /* Увеличиваем вертикальный и горизонтальный отступы */
+ font-size: 20px; /* Уменьшаем размер шрифта */
+ color: white; /* Устанавливаем цвет ссылок */
+ cursor: pointer; /* Задаём изменение вида курсора при наведении на пункты меню */
+ transition: all 0.3s; /* Добавляем плавное изменение стилей при наведении */
+}
+
+
+.menu__list-link:hover {
+ color: #D94040; /* Задаём изменение цвета ссылок при наведении курсора */
+}
