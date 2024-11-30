@@ -1,5 +1,14 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html {
+ box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+ box-sizing: inherit;
+}
+ lang="ru">
  <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -16,21 +25,66 @@
    />
    <link rel="stylesheet" href="css/style.css" />
  </head>
- <body>
+ <body {
+ min-height: 100vh;
+ font-family:"Poppins", sans-serif;
+ background-image: url(https://ru.pinterest.com/pin/21321798230384652/);
+ background-repeat: no-repeat;
+ background-position: center center;
+ background-size: cover;
+  }
+  >
    <header class="header">
      <div class="header__top">
-       <div class="container">
-         <div class="header__top-inner">
+       <div class="container" .container {
+ max-width: 1190px;
+ padding: 0 15px; 
+ margin: 0 auto; 
+}
+        >
+         <div class="header__top-inner" .header__top {
+ padding: 30px;
+} >
            <nav class="menu">
-             <ul class="menu__list">
-               <li class="menu__list-item">
-                 <a class="menu__list-link" href="#">Мы<span></span></a>
+             <ul class="menu__list" .menu__list {
+ display: flex;
+ justify-content: center;
+ list-style: none;
+}>
+               <li class="menu__list-item" .menu__list-item {
+ margin: 0 10px;
+}>
+                 <a class="menu__list-link".menu__list-link {
+ position: relative;
+ color: #fffee7;
+ font-size: 1.1em;
+ text-decoration: none;
+ padding: 6px 20px;
+ cursor: pointer;
+}
+                  href="#">Мы<span></span></a>
                </li>
                <li class="menu__list-item">
-                 <a class="menu__list-link" href="#">Наши проекты<span></span></a>
+                 <a class="menu__list-link" .menu__list-link span {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border: 2px solid #fff;
+ border-radius: 7px;
+ transform: scale(0);
+ opacity: 0;
+ transition: transform 0.5s;
+}
+                  href="#">Наши проекты<span></span></a>
                </li>
                <li class="menu__list-item">
-                 <a class="menu__list-link" href="#">Контакты <span></span></a>
+                 <a class="menu__list-link" .menu__list-link:hover span {
+ transform: scale(1);
+ opacity: 1;
+}
+                  href="#">Контакты <span></span></a>
                </li>
              </ul>
            </nav>
@@ -39,10 +93,34 @@
      </div>
      <div class="header__content">
        <div class="container">
-         <div class="header__content-inner">
-           <h1 class="header__title">КОМАНДА<br />ЛЛЛЛ</h1>
+         <div class="header__content-inner" .header__content-inner {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+ height: 80vh;
+}>
+           <h1 class="header__title" .header__title {
+ font-size: 9em;
+ text-align: center;
+ -webkit-text-stroke: 1px #fff;
+ color: transparent;
+ background: url(https://i.pinimg.com/474x/b8/de/6a/b8de6a16f0d72150e6e41312601835b1.jpg);
+ -webkit-background-clip: text;
+ background-position: 0 0;
+ animation: backText 20s linear infinite alternate;
+}
+            @keyframes backText {
+ 100% {
+   background-position: 2000px 0;
+ }
+}
+>КОМАНДА<br />ЛЛЛЛ</h1>
              
-           <a class="header__icon" href="#">
+           <a {
+ text-decoration: none;
+           }
+            class="header__icon" href="#">
              <img src="/images/mouse.svg" alt="mouse icon" />
            </a>
          </div>
